@@ -1,0 +1,15 @@
+import { BigInteger } from 'big-integer';
+import SerializationState from './State';
+export declare function varint_encode(input: any): Uint8Array;
+export declare function varint_decode(state: SerializationState): BigInteger;
+export declare function integer_sign(input: any, size: number): BigInteger;
+export declare function integer_unsign(input: any, size: number): BigInteger;
+export declare function zigzag_encode(input: any): BigInteger;
+export declare function zigzag_decode(input: any): BigInteger;
+export declare function base58_decode(data: string): Uint8Array;
+export declare function base58_encode(data: Uint8Array): string;
+export declare function hex_decode(hex: string): Uint8Array;
+export declare function hex_encode(bytes: Uint8Array): string;
+export declare function concat_byte_arrays(arr: Uint8Array[]): Uint8Array;
+export declare function int_to_byte_vector(n: any): Uint8Array;
+export declare function byte_vector_to_int(bytes: Uint8Array): number;
