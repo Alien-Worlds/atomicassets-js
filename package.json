@@ -14,7 +14,7 @@
   "types": "build/index.d.ts",
   "scripts": {
     "build:npm": "tsc",
-    "build:web": "webpack --config webpack.prod.js",
+    "build:web": "node --openssl-legacy-provider node_modules/webpack/bin/webpack.js --config webpack.prod.js",
     "build": "yarn run build:npm && yarn run build:web",
     "lint": "tslint -p tsconfig.json",
     "test": "mocha -r ts-node/register test/**/*.test.ts",
@@ -33,7 +33,7 @@
     "tslint-consistent-codestyle": "^1.16.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-origin-ordered-imports-rule": "^1.2.2",
-    "typescript": "^4.2.4",
+    "typescript": "^3.9.10",
     "chai": "^4.3.4",
     "mocha": "^8.4.0",
     "webpack": "^5.37.0",
