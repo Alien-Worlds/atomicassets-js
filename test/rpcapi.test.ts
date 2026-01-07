@@ -5,7 +5,13 @@ import RpcApi from '../src/API/Rpc';
 // tslint:disable-next-line:no-var-requires
 const fetch = require('node-fetch');
 
-describe('RPC API', () => {
+describe('RPC API (integration)', function () {
+    before(function () {
+        if (process.env.INTEGRATION !== '1') {
+            this.skip();
+        }
+    });
+
     const api = new RpcApi('https://wax.pink.gg', 'atomicassets', {
         fetch, rateLimit: 4
     });

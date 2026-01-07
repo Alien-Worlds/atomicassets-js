@@ -1,12 +1,18 @@
 {
   "name": "atomicassets",
   "description": "js module to fetch data from the atomicassets NFT standard",
-  "keywords": ["atomicassets", "nft", "blockchain", "eosio", "pinknetwork"],
+  "keywords": [
+    "atomicassets",
+    "nft",
+    "blockchain",
+    "eosio",
+    "pinknetwork"
+  ],
   "author": "pink.network",
   "homepage": "https://atomicassets.io",
   "bugs": {
-    "url" : "https://github.com/pinknetworkx/atomicassets-js/issues",
-    "email" : "pinknetworkx@gmail.com"
+    "url": "https://github.com/pinknetworkx/atomicassets-js/issues",
+    "email": "pinknetworkx@gmail.com"
   },
   "license": "MIT",
   "version": "1.4.2",
@@ -14,7 +20,7 @@
   "types": "build/index.d.ts",
   "scripts": {
     "build:npm": "tsc",
-    "build:web": "webpack --config webpack.prod.js",
+    "build:web": "node --openssl-legacy-provider node_modules/webpack/bin/webpack.js --config webpack.prod.js",
     "build": "yarn run build:npm && yarn run build:web",
     "lint": "tslint -p tsconfig.json",
     "test": "mocha -r ts-node/register test/**/*.test.ts",
@@ -24,20 +30,20 @@
     "big-integer": "^1.6.48"
   },
   "devDependencies": {
-    "@types/node": "^14.14.44",
-    "@types/mocha": "^8.2.2",
     "@types/chai": "^4.2.18",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.44",
+    "chai": "^4.3.4",
+    "mocha": "^11.7.5",
+    "node-fetch": "^2.6.1",
     "ts-loader": "^9.1.2",
     "ts-node": "^9.1.1",
     "tslint": "^5.20.1",
     "tslint-consistent-codestyle": "^1.16.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-origin-ordered-imports-rule": "^1.2.2",
-    "typescript": "^4.2.4",
-    "chai": "^4.3.4",
-    "mocha": "^8.4.0",
+    "typescript": "^3.9.10",
     "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0",
-    "node-fetch": "^2.6.1"
+    "webpack-cli": "^4.7.0"
   }
 }
